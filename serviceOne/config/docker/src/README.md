@@ -1,2 +1,0 @@
-# microserviceOne
-project structure
