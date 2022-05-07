@@ -1,0 +1,17 @@
+version: '3'
+services: 
+ service-one:
+    image: service-one
+    build: 
+        context: ./
+        dockerfile: Dockerfile:dev
+    container_name: service-one
+    volumes:
+      - /tmp/service-one/npm-cache:/root/.npm:z
+      - ./src:/usr/src/app/src:z
+      - ./server:/usr/src/app/server:z
+    ports:
+      - "4000:80"
+    environment:
+      - PORT=80
+    restart: "no"
