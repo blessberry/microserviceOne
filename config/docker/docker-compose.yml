@@ -3,13 +3,13 @@ services:
  service-one:
     image: service-one
     build: 
-        context: ./
+        context: ../../serviceOne/config/docker
         dockerfile: Dockerfile:dev
     container_name: service-one
     volumes:
       - /tmp/service-one/npm-cache:/root/.npm:z
-      - ./src:/usr/src/app/src:z
-      - ./server:/usr/src/app/server:z
+      - ../../serviceOne/config/docker/src:/usr/src/app/src:z
+      - ../../serviceOne/config/docker/server:/usr/src/app/server:z
     ports:
       - "4000:80"
     environment:
