@@ -3,8 +3,8 @@ services:
  service-one:
     image: service-one
     build: 
-        context: ../../serviceOne/config/docker
-        dockerfile: Dockerfile:dev
+        context: ../../serviceOne/
+        dockerfile: config/docker/Dockerfile:dev
     container_name: service-one
     volumes:
       - /tmp/service-one/npm-cache:/root/.npm:z
