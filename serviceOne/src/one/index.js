@@ -6,3 +6,4 @@ const s = h.createServer((q,r) => {
 }).listen(PORT, () => {
     console.log(`Server Running on ${PORT}`);
 });
+module.exports = s;
